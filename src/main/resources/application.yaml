@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:2345/db
+    driver-class-name: org.postgresql.Driver
+    username: gaishnik
+    password: gaishnik
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+car:
+  number:
+    suffix: 116 RUS

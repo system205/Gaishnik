@@ -1,0 +1,21 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: gaishnik
+      POSTGRES_PASSWORD: gaishnik
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - "2345:5432"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2G
+
+volumes:
+  db:
